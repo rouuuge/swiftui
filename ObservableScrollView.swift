@@ -43,7 +43,7 @@ struct ObservableScrollView<Content>: View where Content : View {
     }
     .coordinateSpace(name: scrollSpace)
     .onPreferenceChange(ScrollViewOffsetPreferenceKey.self) { value in
-        let index = Int((value + rowHeight) / rowHeight) - 1
+        let index = Int((value + rowHeight * 1.5) / rowHeight) - 1
         self.rowIndex = max(0, index)
     }
   }
